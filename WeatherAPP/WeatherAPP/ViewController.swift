@@ -24,7 +24,8 @@ class ViewController: UIViewController {
     
     @IBAction func didTapLogIn(_ sender: Any) {
         print("user e-mail is -> \(emailTextField.text ?? "not data for e-mail")\nuser password is -> \(passwordTextField.text ?? "not data for password")")
-        
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "viewController")
+        self.navigationController?.pushViewController(nextVC!, animated: true)
     }
     
 
